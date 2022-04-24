@@ -1,6 +1,6 @@
 <?php
-// @require_once('database/config.php');
-    require_once('models/modelUser.php');
+
+    require_once('modelUser.php');
     if(isset($_POST['submit'])){
     $regj= new User();
      $regj->setUsername($_POST['username']);
@@ -13,8 +13,7 @@
 
 ?>
 
-
-<?php include_once("controller/registerController.php")?>
+<?php include_once("registerController.php")?>
 <!DOCTYPE html>
 <html>
     <head>

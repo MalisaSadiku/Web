@@ -13,7 +13,7 @@
             <div class="container">
                 <nav>
                     <ul>
-                        <li><a href="Home.php">HOME</a></li>
+                        <li><a href="home.php">HOME</a></li>
                         <li><a href="Contact.php">CONTACT</a></li>
                         <li><a href="Restaurants.php">RESTAURANTS</a></li>
                         <li><a href="Reservations.php">RESERVATIONS</a></li>
@@ -34,11 +34,11 @@
                     <div class="rightside">
                         <div class="contact">
                             <p class="fillform">Ask us anything by filling the form below...</p>
-                            <form class="forms" role="form">
-                                <div class="form-group"><input class="input input-field-contact" required type="text" name="firstname" placeholder="First Name"></div>
-                                <div class="form-group"><input class="input input-field-contact" required type="text" name="lastname" placeholder="Last Name"></div>
-                                <div class="form-group"><input class="input input-field-contact" required type="text" name="email" placeholder="Email"></div>
-                                <div class="form-group"><textarea class="input input-field-contact" required rows="7" cols="7" name="message" placeholder="Message"></textarea></div>
+                            <form class="forms" role="form" action="message.php" method="POST" >
+                                <div class="form-group"><input class="input input-field-contact" id="firstname" required type="text" name="firstname" placeholder="First Name"></div>
+                                <div class="form-group"><input class="input input-field-contact" id="lastname" required type="text" name="lastname" placeholder="Last Name"></div>
+                                <div class="form-group"><input class="input input-field-contact" id="email" required type="text" name="email" placeholder="Email"></div>
+                                <div class="form-group"><textarea class="input input-field-contact" id="message" required rows="7" cols="7" name="message" placeholder="Message"></textarea></div>
                                 <div class="wrapper"><button type="submit" class="pagebutton" name="contactsubmit" onclick="validate(2)">Send Message</button></div>
                             </form>
                         </div>

@@ -1,38 +1,4 @@
-<!--     
-    $host = "localhost";  
-    $user = "root";  
-    $password = '';  
-    $db_name = "databazaweb";  
-      
-    $con = mysqli_connect($host, $user, $password, $db_name);  
-    if(mysqli_connect_error()) {  
-        die("Failed to connect with MySQL: ". mysqli_connect_error());  
-    }
-
-    $email = $_POST['Email'];  
-    $password = $_POST['Password'];
-    
-      
-        //to prevent from mysqli injection  
-        $email = stripcslashes($email);  
-        $password = stripcslashes($password);  
-        $email = mysqli_real_escape_string($con, $email);  
-        $password = mysqli_real_escape_string($con, $password);  
-      
-        $sql = "select *from userat where Email = '$email' and Password = '$password'";  
-        $result = mysqli_query($con, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $count = mysqli_num_rows($result);  
-          
-        if($count == 1){  
-            header('Location:Home.php');  
-        }  
-        else{  
-            echo "<h1> Login failed. Invalid username or password.</h1>";  
-        }      -->
-        <?php include_once("controller/registerController.php")?>
-
-
+   <?php include_once("registerController.php")?>
 
 
 <!DOCTYPE html>
@@ -41,7 +7,12 @@
         <title>Log In</title>
 
         <link rel="stylesheet" href="style/main.css"/>
+       <style>
+           .wrapper{
+       margin-top: 15px;
+}
 
+       </style>
 
 
     </head>
@@ -50,7 +21,7 @@
             <div class="container">
                 <nav>
                     <ul>
-                        <li><a href="home.php">HOME</a></li>
+                         <li><a href="home.php">HOME</a></li>
                         <li><a href="Contact.php">CONTACT</a></li>
                         <li><a href="Restaurants.php">RESTAURANTS</a></li>
                         <li><a href="Reservations.php">RESERVATIONS</a></li>

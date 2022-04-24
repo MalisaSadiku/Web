@@ -1,10 +1,10 @@
 <?php
-@include '../database/config.php';
+@include 'config.php';
 
 
 ?>
 <?php
-require_once('models/modelUser.php');
+require_once('modelUser.php');
 $dhenat=new User();
 $all=$dhenat->lexoDhenat();
 ?>

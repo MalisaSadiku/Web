@@ -1,5 +1,5 @@
 <?php
-require_once('../models/modelUser.php');
+require_once('modelUser.php');
 $dhena = new User();
 if(isset($_GET['id'])){
 $myID=$_GET['id'];
